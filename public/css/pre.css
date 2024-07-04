@@ -1,12 +1,20 @@
+
 body{
+    position: relative;
     display: block;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 12px;
 }
 
-#geo{
+.badge{
+    background-color: #323333;
+    border-radius: 10px;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+#bg{
     position: absolute;
     display: flex;
     width: 100%;
@@ -14,42 +22,43 @@ body{
     background-color: #f7f8f8;
 }
 
-.geo-child{
+.bg-part{
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+
     width: 100%;
     height: 100vh;
 }
-
-.geo-child:nth-child(1){
-    justify-content: flex-end;
-}
-.geo-child:nth-child(2){
-    justify-content: center;
-}
-.geo-child:nth-child(3){
-    justify-content: flex-start;
+.bg-part:nth-child(1){
+    align-items: flex-end;
 }
 
 
-#img-left, #img-right{
+.img-left, .img-right{
     width: 150%;
-    margin: auto;
 }
 
-#img-left{
-    transform: translateY(calc(6vw));
+.img-left:nth-child(1){
+    transform: translateY(calc(9vw));
 }
 
-#img-right{
-    transform: translateY(calc(-6vw));
+.img-right:nth-child(1){
+    transform: translateY(calc(-3vw));
 }
 
 #img-main-logo{
-    width: 60%;
-    margin: auto;
+    width: 50%;
+    margin: 19% auto 0 auto;
 }
 
-/* ---------------------- */
+.spacer{
+    flex-grow: 1;
+}
+
+/* ---------------------------------content--------------------------------- */
 
 #content{
     display: flex;
@@ -59,13 +68,42 @@ body{
     z-index: 1;
 }
 
-.content-child{
+.content-part{
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
     width: 100%;
     height: 100vh;
 }
 
-.content-child:nth-child(1) p{
-    width: 100%;
-    color: black;
+.content-part:nth-child(1){
+    justify-content: flex-start;
+    padding-top: 30px;
+}
+
+.content-part:nth-child(2), .content-part:nth-child(3){
+    justify-content: flex-end;
+}
+
+#datetime{
+    display: flex;
+    justify-content: space-around;
+
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+.datetime-part:nth-child(1){
+    flex-direction: column;
+}
+
+#access{
+    padding: 0 30px 30px 0;
+}
+
+/* タブレット用スタイル */
+@media (min-width: 600px) {
 }
