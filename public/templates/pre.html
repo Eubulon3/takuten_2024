@@ -25,48 +25,52 @@
     <meta name="twitter:description" content="卓展とは、名古屋市立大学芸術工学部の学生による作品展示会です。プロジェクトに賛同した人々が卓を囲むようにして集まることから卓展となりました。">
     <!-- <meta name="twitter:image" content="https://geikou-takuten.com/2024/ogp.png"> -->
     
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'nln2auc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
     <link rel="stylesheet" href="../css/pre.css">
+
+
 </head>
 
 <body>
     <div id="bg">
-        <div class = "bg-part">
-            <img class = "img-left" src="../image/geo_up_left.png" alt="背景画像">
-            <div class="spacer"></div>
-            <img class = "img-left" src="../image/geo_low_left.png" alt="背景画像">
-        </div>
-
-        <div class = "bg-part">
-            <img id = "img-main-logo" src="../image/main_logo.png" alt="ロゴ画像">
-        </div>
-
-        <div class = "bg-part">
-            <img class = "img-right" src="../image/geo_up_right.png" alt="背景画像">
-            <div class="spacer"></div>
-            <img class = "img-right" src="../image/geo_low_right.png" alt="背景画像">
-        </div>
+        <div class="spacer"></div>
+        <img class="img img-color visible" src="../images/mobile_geo_1.png" alt="画像">
+        <div class="spacer visible"></div>
+        <img class="img img-gray visible" src="../images/mobile_geo_2.png" alt="画像">
+        <img class="img invisible" src="../images/pc_geo.png" alt="画像">
+        <div class="spacer"></div>
     </div>
-
-    <!-- <div id="content">
-        <div class="content-part">
-            <p>デザインを学ぶ学生の8つのプロジェクトによる<br>作品発表・展示会</p>
+    <div id="content">
+        <div class = "column">
+            <p>デザインを学ぶ学生の8つのプロジェクトによる<br class="visible">作品発表・展示会</p>
         </div>
-        <div class="content-part">
+        <div class="column invisible"></div>
+        <div class="column">
+            <div class="spacer visible"></div>
             <div id="datetime">
                 <div class="datetime-part">
-                    <p>8.16 <span>Fri</span></p>
-                    <p>↓</p>
-                    <p>8.18 <span>Sun</span></p>
+                    <p><span class="text-xl">8.16</span> Fri</p>
+                    <img src="../images/arrow.svg" alt="↓">
+                    <p><span class="text-xl toppan">8.18</span> Sun</p>
                 </div>
                 <div class="datetime-part">
-                    <p>10:00 - 17:00<br><span>最終日のみ - 16:00</span></p>
+                    <p><span class="text-l">10:00 - 17:00</span><br>最終日のみ - 16:00</p>
                     <p><span class="badge">入場無料</span></p>
                 </div>
             </div>
-        </div>
-        <div class="content-part">
+            <div class="spacer visible"></div>
             <div id="access">
-                <p>名古屋市立大学 北千種キャンパス</p>
+                <p class="text-l toppan">名古屋市立大学 北千種キャンパス</p>
                 <p>愛知県名古屋市千種区北千種 2-1-10</p>
                 <p>
                     ・地下鉄 名城線「名古屋ドーム前矢田駅」1番出口より徒歩15分<br>
@@ -74,7 +78,8 @@
                     ・市バス「清明山」より徒歩5分
                 </p>
             </div>
+            <div class="spacer visible"></div>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>
