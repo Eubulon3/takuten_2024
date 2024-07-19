@@ -10,6 +10,7 @@ body{
     height: auto;
     margin: 0;
     padding: 0;
+    font-family: Arial, "MS Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 p{
@@ -134,7 +135,6 @@ nav ul li{
     position: absolute;
     width: 100vw;
     height: calc(100vh - 120px);
-    height: -webkit-fill-available;
     top: 60px;
     left: 0;
     background-color: #ededee;
@@ -175,7 +175,7 @@ nav ul li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
 }
 
 #nav-box .logo-sns{
