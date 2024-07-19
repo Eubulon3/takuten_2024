@@ -15,11 +15,17 @@ body{
 
 p{
     margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 a{
     text-decoration: none;
     color: #000;
     box-sizing: border-box;
+}
+.gothic{
+    font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+    font-style: normal;
 }
 
 .badge{
