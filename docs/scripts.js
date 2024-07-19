@@ -6,5 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
     menuIcon.addEventListener("click", function() {
         navbar.classList.toggle("show");
         header.classList.toggle("hide");
+        if (navbar.classList.contains('show')) {
+            document.body.style.overflow = 'hidden'; // スクロールを許可
+        } else {
+            document.body.style.overflow = 'auto'; // スクロールを禁止
+        }
     });
 });
