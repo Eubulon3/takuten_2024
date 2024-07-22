@@ -78,6 +78,10 @@ header{
     z-index: 1;
 }
 
+#header p, #header a{
+    font-family: "MS Gothic", "sans-serif";
+}
+
 #header{
     display: flex;
     justify-content: space-between;
@@ -192,6 +196,10 @@ nav ul li{
     justify-content: center;
 
     column-gap: 20px;
+}
+
+#nav-box .logo-sns img{
+    width: 1.5rem;
 }
 
 
@@ -435,10 +443,11 @@ section{
 }
 
 #sponsors img{
-    width: 100%;
-    box-shadow: 0 0 5px 10px rgba(255,255,255,1) ;
+    min-width: 150px;
+    width: 25vw;
+    max-width: 200px;
+    box-shadow: 0 0 0px 10px rgba(255,255,255,1) ;
 }
-
 
 
 /* -----------------------------------/main----------------------------------- */
