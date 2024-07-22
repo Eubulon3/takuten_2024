@@ -308,7 +308,12 @@ section{
 
 @media (min-width: 520px){ 
     #hero img{
-        height: 100%;
+        height: 110vh;
+    }
+}
+@media (min-width: 1024px){
+    #hero img{
+        height: 110vh;
     }
 }
 /* -----------------------------------intro----------------------------------- */
