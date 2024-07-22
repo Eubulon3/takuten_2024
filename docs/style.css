@@ -60,7 +60,9 @@ a{
     .hide-on-mobile{
         display: block;
     }
-    
+    .hide-on-non-mobile{
+        display: none;
+    }
 }
 
 /* -----------------------------------header----------------------------------- */
@@ -291,7 +293,8 @@ section{
 
 #hero{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,9 +303,14 @@ section{
 }
 
 #hero img{
-    width: 170%;
+    height: 110vh;
 }
 
+@media (min-width: 520px){ 
+    #hero img{
+        height: 100%;
+    }
+}
 /* -----------------------------------intro----------------------------------- */
 
 #intro{
