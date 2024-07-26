@@ -3,6 +3,7 @@ html{
     height: auto;
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
 body{
     position: relative;
@@ -36,6 +37,7 @@ button{
     outline: none;
     padding: 0;
     appearance: none;
+    color: #000;
 }
 
 .badge{
@@ -66,12 +68,21 @@ button{
     display: none;
 }
 
+
 @media (min-width: 520px){
+    html{
+        font-size: 16px;
+    }
     .hide-on-mobile{
         display: block;
     }
     .hide-on-non-mobile{
         display: none;
+    }
+}
+@media (min-width: 1024px){
+    html{
+        font-size: 18px;
     }
 }
 
@@ -410,6 +421,30 @@ section{
     justify-content: space-between;
 }
 
+#list .detail > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+#list .detail > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+#list .detail > div > div > div{
+    overflow: scroll;
+}
+
+#return-button{
+    text-decoration: underline;
+}
+
 #list .detail img{
     width: 60%;
     filter: drop-shadow(1px 2px 3px rgba(0,0,0,.5));
@@ -446,6 +481,18 @@ section{
         content: "";
         width: calc(33.33% - 40px);
     }
+    #list .detail > div{
+        width: 80%;
+        flex-direction: row;
+    }
+    #list .detail > div > div{
+        row-gap: 2rem;
+        padding: 0 2rem;
+    }
+    #list .detail img{
+        width: 30%;
+    }
+
 }
 @media (min-width: 1024px){
     #list .content{

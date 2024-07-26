@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".taku-button");
 
     const taku_info = [
-        ["./images/logo_metalab.png", "めたらぼ (CG・ゲーム)", "めたらぼ説明文", "めたらぼ"],
+        ["./images/logo_metalab.png", "めたらぼ (CG・ゲーム)", "めたらぼ説明文aaaaaあああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああaaaaaaaaaaaaaaaaaaaaaaaaw", "めたらぼ"],
         ["./images/logo_arca.png", "arca (プロダクトデザイン)", "arca説明文", "arca"],
         ["./images/logo_roxima.png", "proxima (モビリティデザイン)", "proxima説明文", "proxima"],
         ["./images/logo_reverb.png", "reverb (サウンドデザイン)", "reverb説明文", "reverb"],
