@@ -437,9 +437,6 @@ section{
     flex-grow: 1;
 }
 
-#list .detail > div > div > div{
-    overflow: scroll;
-}
 
 #return-button{
     text-decoration: underline;

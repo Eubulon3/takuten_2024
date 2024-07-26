@@ -52,10 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
             taku_name.textContent = taku_info[i][1];
             taku_disc.textContent = taku_info[i][2];
             linkfor.textContent = taku_info[i][3];
+
+            document.body.style.overflow = 'hidden';
         })
     }
 
     return_button.addEventListener("click", function() {
         taku_detail.classList.toggle("show");
+        document.body.style.overflow = 'auto';
     })
 });
