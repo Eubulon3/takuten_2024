@@ -1,0 +1,91 @@
+@use "variable" as v;
+
+@mixin mq($breakPoint: md) {
+  @media #{map-get(v.$breakPoints, $breakPoint)} {
+    @content;
+  }
+}
+
+@mixin wrap($childEl: div) {
+  .wrap {
+    @content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$flexGap;
+
+    & > #{$childEl} {
+      width: calc(50% - v.$flexGap);
+    }
+
+    @include mq(sm) {
+      &::after {
+        content: "";
+        width: calc(33.33% - v.$flexGap);
+      }
+
+      & > #{$childEl} {
+        width: calc(33.33% - v.$flexGap);
+      }
+    }
+    @include mq(lg) {
+      & > #{$childEl} {
+        width: calc(25% - v.$flexGap);
+      }
+    }
+  }
+}
+
+@mixin badge($cBg: v.$cBlack, $Col: v.$cWhite) {
+  .badge {
+    @content;
+    display: inline-block;
+    height: 2.5em;
+    background-color: $cBg;
+    color: $Col;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    font-weight: 600;
+  }
+}
+
+@mixin button($col: v.$cBlack){
+  .button{
+    @content;
+    display: block;
+    width: fit-content;
+    padding: .5em 1.5em;
+    background-color: v.$cWhite;
+    border: 1px solid $col;
+    border-radius: 1.3em;
+    color: $col;
+    transition: .1s;
+
+    &:hover{
+      background-color: $col;
+      color: v.$cWhite;
+    }
+  }
+}
+
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: alternate,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}

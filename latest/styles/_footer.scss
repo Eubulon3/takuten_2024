@@ -1,0 +1,21 @@
+@use "variable" as v;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+
+  div{
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: .5em;
+
+    img{
+        width: auto;
+        height: 100%;
+    }
+  }
+}

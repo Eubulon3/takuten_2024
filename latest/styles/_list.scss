@@ -1,0 +1,169 @@
+@use "mixin" as *;
+@use "variable" as v;
+
+.list {
+  position: relative;
+  &__summary {
+    @include wrap(button) {
+    }
+
+    &-container {
+      margin-top: 50px;
+    }
+
+    &-button {
+      &-image {
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+      }
+
+      &-genre {
+        display: inline-block;
+        margin-top: 0.5em;
+      }
+    }
+  }
+  &--overlay {
+    position: fixed;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__detail {
+    position: relative;
+    width: 90%;
+    max-width: v.$contentMaxWidth;
+    height: auto;
+    max-height: 90%;
+    background-color: v.$cWhite;
+    border-top: 10px solid v.$cMain;
+    overflow-y: auto;
+
+    &-each {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: v.$flexGap;
+      padding: 60px 30px;
+
+      &-image {
+        width: 100%;
+        padding: 0 60px;
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+      }
+
+      &-text {
+        width: 100%;
+        @include button(v.$cMain) {
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-discription {
+          margin-top: 0.5em;
+        }
+
+        &-link {
+          margin-top: 2em;
+        }
+      }
+
+      &-return{
+        position: absolute;
+        top: 20px;
+        right: 5px;
+        z-index: 100;
+        &::after,
+        &::before{
+          display: block;
+          content: "";
+          width: 30px;
+          height: 2px;
+          border-radius: 1.5px;
+          background-color: v.$cBlack;
+          transform-origin: center center;
+        }
+        &::before{
+          transform: translateY(1px) rotateZ(45deg);
+        }
+        &::after{
+          transform: translateY(-1px) rotateZ(-45deg);
+        }
+      }
+    }
+    @include mq(sm) {
+      &-each {
+        padding: 60px 50px;
+        &-image {
+          padding: 0 100px;
+        }
+      }
+    }
+
+    @include mq(md) {
+      height: auto;
+      &-each {
+        flex-wrap: wrap;
+        gap: v.$flexGap;
+        flex-direction: row;
+        padding: 60px 100px;
+        &-image {
+          padding: 0 10px;
+          width: calc(40% - v.$flexGap);
+        }
+        &-text {
+          width: calc(60% - v.$flexGap);
+        }
+      }
+    }
+
+  }
+
+  &.open {
+    .list {
+      &--overlay {
+        display: flex;
+      }
+    }
+  }
+}
+
+.swiper {
+  &-pagination {
+    &-bullet-active {
+      background-color: v.$cMain;
+    }
+  }
+  &-button-prev,
+  &-button-next {
+    color: v.$cMain;
+  }
+
+  &-button-prev::after {
+    content: "";
+    @include mq(sm) {
+      content: "prev";
+    }
+  }
+  &-button-next::after {
+    content: "";
+    @include mq(sm) {
+      content: "next";
+    }
+  }
+  &-scrollbar{
+    bottom: 0 !important;
+  }
+}

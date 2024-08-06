@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ローダーCDN等 -->
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./styles/vendors/loading-bar.css"
+    />
+    <script>
+      Pace.on('start', function() {
+        const paceProgressInner = document.querySelector('.pace-progress-inner');
+        paceProgressInner.innerHTML = "<div></div><div></div><div></div><div></div>";
+        document.body.style.overflow = "hidden";
+      });
+      Pace.on("done", function() {
+        document.body.style.overflow = "auto";
+      });
+    </script>
+    <!--  -->
+
+    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <header class="header">
+        <a href="#" class="header__heading">
+          <img
+            class="header__heading-image"
+            src="./imgs/logo_takuten.png"
+            alt="卓展ロゴ"
+          />
+          <img
+            class="header__heading-image text-image"
+            src="./imgs/text_takuten.png"
+            alt="takuten2024"
+          />
+        </a>
+        <nav class="header__navigation hide-on-mobile">
+          <ul>
+            <li><a href="#about">卓展とは</a></li>
+            <li><a href="#list">卓一覧</a></li>
+            <li><a href="#venue">会場情報</a></li>
+            <li><a href="#sponsor">協賛</a></li>
+          </ul>
+        </nav>
+        <button class="hide-on-non-mobile header__button header__button--clicked">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__mask">
+          <nav class="header__mask-navigation">
+            <ul class="header__mask-navigation-container">
+              <li class="header__mask-navigation-text">
+                <a class="font-lr" href="#about">卓展とは</a>
+              </li>
+              <li class="header__mask-navigation-text">
+                <a class="font-lr" href="#list">卓一覧</a>
+              </li>
+              <li class="header__mask-navigation-text">
+                <a class="font-lr" href="#venue">会場情報</a>
+              </li>
+              <li class="header__mask-navigation-text">
+                <a class="font-lr" href="#sponsor">協賛</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__mask-title">
+            <img
+              class="header__mask-title-img"
+              src="./imgs/logo_takuten.png"
+              alt="背景画像"
+            />
+            <p class="header__mask-title-text">
+              Nagoya City Univercity<br />
+              School of Design and Architecture<br />
+              takuten2024
+            </p>
+          </div>
+          <div class="header__mask-sns">
+            <span>OFFICIAL SNS</span>
+            <div class="header__mask-sns-icons">
+              <a href=""
+                ><img
+                  class="header__mask-sns-icons-icon"
+                  src="./imgs/logo_insta.png"
+                  alt="公式インスタグラム"
+              /></a>
+              <a href=""
+                ><img
+                  class="header__mask-sns-icons-icon"
+                  src="./imgs/logo_x.png"
+                  alt="公式X(旧Twitter)"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <main>
+        <section id="hero" class="hero"></section>
+        <section id="about">
+          <div class="content">
+            <h1>卓展とは</h1>
+            <p>
+              名古屋市立大学芸術工学部による作品展示会です。<br
+                class="hide-on-mobile"
+              />
+              プロジェクトに賛同した人々が卓を囲むように集まることから<br
+                class="hide-on-mobile"
+              />
+              卓展となりました。
+            </p>
+          </div>
+        </section>
+        <section id="list" class="list">
+          <div class="list__summary content">
+            <h1>卓一覧</h1>
+            <div class="list__summary-container wrap">
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_metalab.png"
+                  alt="めたらぼ画像"
+                />
+                <span class="font-sm list__summary-button-genre">CG・ゲーム</span>
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_arca.png"
+                  alt="arca画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >プロダクトデザイン</span
+                >
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_roxima.png"
+                  alt="roxima画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >モビリティデザイン</span
+                >
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_reverb.png"
+                  alt="reverb画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >サウンドデザイン</span
+                >
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_remodel.png"
+                  alt="remodel画像"
+                />
+                <span class="font-sm list__summary-button-genre">建築</span>
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_strato.png"
+                  alt="strato画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >サービスデザイン</span
+                >
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_rium.png"
+                  alt="rium画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >グラフィックデザイン</span
+                >
+              </button>
+              <button class="list__summary-button">
+                <img
+                  class="list__summary-button-image"
+                  src="./imgs/logo_sin.png"
+                  alt="sin画像"
+                />
+                <span class="font-sm list__summary-button-genre"
+                  >プロダクトデザイン</span
+                >
+              </button>
+            </div>
+            <div class="list--overlay">
+              <!-- Slider main container -->
+              <div class="swiper list__detail">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_metalab.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >めたらぼ (CG・ゲーム)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        CGからゲームまでデジタルコンテンツをデザインし、提案する卓です。CGゲーム開発の基礎から学び、映像制作やゲーム企画等を通して可能性を追求します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_arca.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >arca (プロダクトデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        少し先の未来のためのプロダクトをデザインする卓です。製品開発のスパンである3〜5年先の社会を想像し、そこで求められるプロダクトを生み出します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_roxima.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >proxima (モビリティデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        未来のモビリティをデザインし、提案する卓です。「2034年、人々を幸せにするモビリティ」をテーマとして、グループで様々なことを学び、未来のモビリティを提案します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_reverb.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >reverb (サウンドデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        DAWを用いた楽曲制作のプロセスと手法を学びながら、試行錯誤を繰り返し楽曲を制作する卓です。さまざまな音楽が好きな仲間同士でフィードバックし合いながらより良い楽曲の完成を目指します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_remodel.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >remodel (建築)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        建築の調査を通して、魅力を生み出す建築的な要素を抽出し空間を再編する卓です。模型材料の幅も広げ、魅力が最大限伝わる表現を追求します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_strato.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >strato (サービスデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        サービスをデザインする卓です。チームでリサーチや分析を行い、独自のサービスをデザインし、アプリケーションのプロトタイプやLPを制作します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_rium.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >+rium (グラフィックデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        グラフィックを用いて｢自分だけの世界｣をデザインする卓です。マインドマップで自己理解を深めながら、趣味や夢が詰まった世界を自由なアウトプットで表現します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide list__detail-each">
+                    <img
+                      src="./imgs/logo_sin.png"
+                      alt="no-image"
+                      class="list__detail-each-image"
+                    />
+                    <div class="list__detail-each-text">
+                      <span class="list__detail-each-text-name"
+                        >sin (プロダクトデザイン)</span
+                      >
+                      <p class="list__detail-each-text-discription">
+                        グッドデザインニューホープ賞を目指し、革新的なプロダクトデザインに取り組む卓です。分析とプロトタイプ検討を通じて、常に知見を深め、より優れた製品の制作を追求します。
+                      </p>
+                      <a href="" class="list__detail-each-text-link button"
+                        >サイトを見に行く</a
+                      >
+                      <span class="font-sm">※特設サイトへ移動します</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="list__detail-each-return"></button>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+  
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+  
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="venue">
+          <div class="content">
+            <h1>会場情報</h1>
+            <div>
+              <div>
+                <div>
+                  <span class="font-lg">8.16</span
+                  ><span class="font-sm">Fri</span>
+                </div>
+                <div><span>&darr;</span></div>
+                <div>
+                  <span class="font-lg">8.18</span
+                  ><span class="font-sm">Sun</span>
+                </div>
+              </div>
+              <div>
+                <div><span class="font-lr">10:00 - 17:00</span></div>
+                <div><span class="font-sm">最終日のみ - 16:00</span></div>
+                <div><span class="badge font-md">入場無料</span></div>
+              </div>
+              <div>
+                <img src="./imgs/map.png" alt="地図画像" />
+              </div>
+            </div>
+            <p class="font-lr">
+              名古屋市立大学 北千種キャンパス<br />
+              &#12306;464-0083 愛知県名古屋市千種区北千種2-1-10
+            </p>
+            <p>
+              &#9632;地下鉄 名城線「ナゴヤドーム前矢田駅」1番出口より徒歩15分<br />
+              &#9632;市バス・名鉄バス「萱場」より徒歩1分<br />
+              &#9632;市バス「清明山」より徒歩5分
+            </p>
+          </div>
+        </section>
+        <section id="sponsor">
+          <div class="content">
+            <h1>協賛</h1>
+            <img src="./imgs/kenkoukai.png" alt="萱光会" />
+          </div>
+          <img src="./imgs/text_takuten.svg" alt="" />
+        </section>
+      </main>
+      <footer>
+        <span>OFFICIAL SNS</span>
+        <div>
+          <a href=""
+            ><img src="./imgs/logo_insta.png" alt="公式インスタグラム"
+          /></a>
+          <a href=""><img src="./imgs/logo_x.png" alt="公式X(旧Twitter)" /></a>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

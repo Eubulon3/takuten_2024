@@ -1,0 +1,19 @@
+$cBlack: black;
+$cGray: #535353;
+$cWhite: white;
+$cMain: #ea6849;
+$cSub: #62b3e4;
+$cBase: #ededed;
+$headerHeight: 70px;
+$contentMaxWidth: 800px;
+$flexGap: 25px;
+$breakPoints: (
+  //スマホ横
+  "sm": "(min-width: 480px)",
+  //タブレット
+  "md": "(min-width: 600px)",
+  //ノートpc
+  "lg": "(min-width: 960px)",
+  //デスクトップpc
+  "xl": "(min-width: 1280px)"
+);

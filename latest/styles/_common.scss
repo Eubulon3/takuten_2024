@@ -1,0 +1,105 @@
+@use "mixin" as *;
+@use "variable" as v;
+
+html {
+  font-family: "Arial", "BIZ UDPGothic", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: v.$cBlack;
+  text-decoration: none;
+}
+
+button {
+  border: none !important;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+ul{
+  padding: 0;
+}
+
+.font-sm {
+  font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+.font-md {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 19px;
+  }
+}
+.font-lr {
+  font-size: 17px;
+  font-weight: bold;
+
+  @include mq(lg) {
+    font-size: 23px;
+  }
+}
+.font-lg {
+  font-size: 25px;
+  font-weight: bold;
+
+  @include mq(lg) {
+    font-size: 36px;
+  }
+}
+
+.hide-on-mobile {
+  display: none;
+
+  @include mq(sm) {
+    display: inline;
+  }
+}
+
+.hide-on-non-mobile {
+  display: block;
+
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+
+
+section {
+  width: 100%;
+  padding: 100px 0;
+  min-height: calc(100vh - v.$headerHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 90%;
+  max-width: v.$contentMaxWidth;
+  margin: 0 auto;
+
+  @include mq(sm) {
+    width: 70%;
+  }
+  @include mq(md) {
+    width: 60%;
+  }
+}

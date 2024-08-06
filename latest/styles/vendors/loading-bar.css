@@ -1,0 +1,90 @@
+.pace-done #global-container {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.pace-running #global-container {
+  opacity: 0;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+}
+.pace .pace-progress {
+  transform: none !important;
+  text-align: center;
+}
+.pace .pace-progress:after {
+  content: attr(data-progress-text);
+  display: block;
+  font-weight: 100;
+  font-size: 1.5em;
+  font-family: "Arial", "BIZ UDPGothic", sans-serif;
+  color: #535353;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+
+.pace-progress-inner {
+  display: flex;
+  gap: 3px;
+  width: 33px;
+  margin: 10px auto;
+}
+.pace-progress-inner div {
+  width: 6px;
+  height: 16px;
+  background-color: #62b3e4;
+  border-radius: 2px;
+  animation-name: sk-growrect;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.pace-progress-inner div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.pace-progress-inner div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.pace-progress-inner div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.pace-progress-inner div:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes sk-growrect {
+  0%, 50%, 100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2);
+    background-color: #ea6849;
+  }
+}/*# sourceMappingURL=loading-bar.css.map */
