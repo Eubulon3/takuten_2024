@@ -1,0 +1,52 @@
+@use "mixin" as *;
+@use "variable" as v;
+
+.hero {
+  display: block;
+  margin-top: v.$headerHeight;
+  padding: 0;
+  overflow: hidden;
+
+  &__flex-container {
+    height: calc(100vh - v.$headerHeight);
+    display: flex;
+    flex-direction: column;
+
+    @media (orientation: landscape) {
+      flex-direction: row;
+    }
+  }
+
+  &__image-container {
+    flex: 1;
+    position: relative;
+
+    &:nth-child(1){
+        & > img{
+            position: absolute;
+            width: 80%;
+            right: 40%;
+            bottom: -20px;
+        }
+    }
+    &:nth-child(2){
+        & > img{
+            margin: 0 auto;
+            &:nth-child(1){
+                width: 150px;
+            }
+            &:nth-child(2){
+                width: 150px;
+            }
+        }
+    }
+    &:nth-child(3){
+        & > img{
+            position: absolute;
+            width: 80%;
+            left: 40%;
+            top: -20px;
+        }
+    }
+  }
+}

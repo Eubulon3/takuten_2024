@@ -7,17 +7,17 @@
 
     <!-- ローダーCDN等 -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="./styles/vendors/loading-bar.css"
-    />
+    <link rel="stylesheet" href="./styles/vendors/loading-bar.css" />
     <script>
-      Pace.on('start', function() {
-        const paceProgressInner = document.querySelector('.pace-progress-inner');
-        paceProgressInner.innerHTML = "<div></div><div></div><div></div><div></div>";
+      Pace.on("start", function () {
+        const paceProgressInner = document.querySelector(
+          ".pace-progress-inner"
+        );
+        paceProgressInner.innerHTML =
+          "<div></div><div></div><div></div><div></div>";
         document.body.style.overflow = "hidden";
       });
-      Pace.on("done", function() {
+      Pace.on("done", function () {
         document.body.style.overflow = "auto";
       });
     </script>
@@ -59,7 +59,9 @@
             <li><a href="#sponsor">協賛</a></li>
           </ul>
         </nav>
-        <button class="hide-on-non-mobile header__button header__button--clicked">
+        <button
+          class="hide-on-non-mobile header__button header__button--clicked"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -112,9 +114,25 @@
           </div>
         </div>
       </header>
-  
+
       <main>
-        <section id="hero" class="hero"></section>
+        <section id="hero" class="hero">
+          <div class="hero__flex-container">
+            <div class="hero__image-container">
+              <img src="./imgs/geo_left.png" alt="no-image" />
+            </div>
+            <div class="hero__image-container">
+              <img src="./imgs/logo_takuten.png" alt="no-image" />
+              <img src="./imgs/text_takuten.png" alt="takuten2024" />
+            </div>
+            <div class="hero__image-container">
+              <img
+                src="./imgs/geo_right.png"
+                alt="no-image"
+              />
+            </div>
+          </div>
+        </section>
         <section id="about">
           <div class="content">
             <h1>卓展とは</h1>
@@ -139,7 +157,9 @@
                   src="./imgs/logo_metalab.png"
                   alt="めたらぼ画像"
                 />
-                <span class="font-sm list__summary-button-genre">CG・ゲーム</span>
+                <span class="font-sm list__summary-button-genre"
+                  >CG・ゲーム</span
+                >
               </button>
               <button class="list__summary-button">
                 <img
@@ -372,11 +392,11 @@
                 <button class="list__detail-each-return"></button>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-  
+
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-  
+
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
               </div>

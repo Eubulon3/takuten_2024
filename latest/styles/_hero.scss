@@ -1,6 +1,0 @@
-@use "mixin" as *;
-@use "variable" as v;
-
-.hero{
-    margin-top: v.$headerHeight;
-}
