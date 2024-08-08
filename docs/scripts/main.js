@@ -52,6 +52,8 @@ class TakuDetail {
     this.swiper = new Swiper(".swiper", {
       // direction: "vertical",
       loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
 
       // If we need pagination
       pagination: {

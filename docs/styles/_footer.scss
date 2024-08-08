@@ -6,16 +6,18 @@
   align-items: center;
   padding: 10px 0;
 
-  &__logos-container{
+  &__icons-container {
     height: 1.5rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: .5em;
+    margin-top: 0.5em;
 
-    &-logo{
-        width: auto;
-        height: 100%;
+    &-icon {
+      width: auto;
+      height: 100%;
+      &--right{
+        margin-left: 2em;
+      }
     }
   }
 }

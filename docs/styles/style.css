@@ -222,12 +222,14 @@ section {
   height: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
   margin-top: 0.5em;
 }
 .header__mask-sns-icons-icon {
   width: auto;
   height: 100%;
+}
+.header__mask-sns-icons-icon--right {
+  margin-left: 2em;
 }
 .header.open .header__mask {
   animation-name: kf-fadein;
@@ -622,14 +624,16 @@ section {
   align-items: center;
   padding: 10px 0;
 }
-.footer__logos-container {
+.footer__icons-container {
   height: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
   margin-top: 0.5em;
 }
-.footer__logos-container-logo {
+.footer__icons-container-icon {
   width: auto;
   height: 100%;
+}
+.footer__icons-container-icon--right {
+  margin-left: 2em;
 }/*# sourceMappingURL=style.css.map */
