@@ -16,6 +16,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  color: black;
 }
 
 img {
@@ -322,22 +323,22 @@ section {
 }
 .hero__image-container:nth-child(1) > img {
   position: absolute;
-  width: 80%;
+  width: 90%;
   right: 40%;
   bottom: -20px;
 }
 .hero__image-container:nth-child(2) > img {
   margin: 0 auto;
 }
-.hero__image-container:nth-child(2) > img:nth-child(1) {
-  width: 150px;
+.hero__image-container:nth-child(2) > img:first-child {
+  width: 110px;
 }
-.hero__image-container:nth-child(2) > img:nth-child(2) {
-  width: 150px;
+.hero__image-container:nth-child(2) > img:last-child {
+  width: 110px;
 }
 .hero__image-container:nth-child(3) > img {
   position: absolute;
-  width: 80%;
+  width: 90%;
   left: 40%;
   top: -20px;
 }
@@ -615,20 +616,20 @@ section {
   left: 0;
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 0;
 }
-footer div {
+.footer__logos-container {
   height: 1.5rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-top: 0.5em;
 }
-footer div img {
+.footer__logos-container-logo {
   width: auto;
   height: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -24,7 +24,7 @@
     &:nth-child(1){
         & > img{
             position: absolute;
-            width: 80%;
+            width: 90%;
             right: 40%;
             bottom: -20px;
         }
@@ -32,18 +32,18 @@
     &:nth-child(2){
         & > img{
             margin: 0 auto;
-            &:nth-child(1){
-                width: 150px;
+            &:first-child{
+                width: 110px;
             }
-            &:nth-child(2){
-                width: 150px;
+            &:last-child{
+                width: 110px;
             }
         }
     }
     &:nth-child(3){
         & > img{
             position: absolute;
-            width: 80%;
+            width: 90%;
             left: 40%;
             top: -20px;
         }
