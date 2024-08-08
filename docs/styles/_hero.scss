@@ -21,32 +21,142 @@
     flex: 1;
     position: relative;
 
-    &:nth-child(1){
-        & > img{
-            position: absolute;
-            width: 90%;
-            right: 40%;
-            bottom: -20px;
+
+    &:nth-child(1) {
+      & > img {
+        position: absolute;
+        width: 350px;
+        left: -100px;
+        bottom: -30px;
+        max-width: none;
+
+        @include mq(sm) {
+          width: 450px;
+          left: -150px;
+          bottom: -40px;
         }
+        @include mq(md) {
+          width: 550px;
+          left: -150px;
+          bottom: -60px;
+        }
+        @include mq(lg) {
+          width: 700px;
+          left: -150px;
+          bottom: -60px;
+        }
+        @include mq(xl) {
+          width: 1000px;
+          left: -150px;
+          bottom: -60px;
+        }
+        @media (orientation: landscape) {
+          width: 400px;
+          top: calc(50% - v.$headerHeight);
+          bottom: auto;
+          right: 0;
+          left: auto;
+          @include mq(sm) {
+            width: 300px;
+          }
+          @include mq(md) {
+            width: 400px;
+          }
+          @include mq(lg) {
+            width: 500px;
+            top: calc(40% - v.$headerHeight);
+          }
+          @include mq(xl) {
+            width: 700px;
+          }
+        }
+      }
     }
-    &:nth-child(2){
-        & > img{
-            margin: 0 auto;
-            &:first-child{
-                width: 110px;
-            }
-            &:last-child{
-                width: 110px;
-            }
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      & > img {
+        margin: 0 auto;
+        width: 110px;
+        @include mq(sm) {
+          width: 130px;
         }
+        @include mq(md) {
+          width: 170px;
+        }
+        @include mq(lg) {
+          width: 200px;
+        }
+        @include mq(xl) {
+          width: 240px;
+        }
+        @media (orientation: landscape) {
+          @include mq(sm) {
+            width: 100px;
+          }
+          @include mq(md) {
+            width: 130px;
+          }
+          @include mq(lg) {
+            width: 200px;
+          }
+          @include mq(xl) {
+            width: 240px;
+          }
+        }
+      }
     }
-    &:nth-child(3){
-        & > img{
-            position: absolute;
-            width: 90%;
-            left: 40%;
-            top: -20px;
+    &:nth-child(3) {
+      & > img {
+        position: absolute;
+        width: 350px;
+        right: -100px;
+        top: -30px;
+        max-width: none;
+
+        @include mq(sm) {
+          width: 450px;
+          right: -150px;
+          top: -40px;
         }
+        @include mq(md) {
+          width: 550px;
+          right: -150px;
+          top: -60px;
+        }
+        @include mq(lg) {
+          width: 700px;
+          right: -150px;
+          top: -60px;
+        }
+        @include mq(xl) {
+          width: 1000px;
+          right: -150px;
+          top: -60px;
+        }
+        @media (orientation: landscape) {
+          width: 400px;
+          bottom: calc(50% - v.$headerHeight);
+          top: auto;
+          right: auto;
+          left: 0;
+          @include mq(sm) {
+            width: 300px;
+          }
+          @include mq(md) {
+            width: 400px;
+          }
+          @include mq(lg) {
+            width: 500px;
+            bottom: calc(40% - v.$headerHeight);
+          }
+          @include mq(xl) {
+            width: 700px;
+          }
+        }
+      }
     }
   }
 }

@@ -50,10 +50,10 @@
     span {
       display: block;
       background-color: v.$cBlack;
-      width: 30px;
+      width: 25px;
       height: 3px;
       border-radius: 1.5px;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
 
       transition: transform 0.5s;
 
@@ -134,14 +134,13 @@
       transform: translateY(-2em);
 
       &-icons {
-        height: 1.5rem;
         display: flex;
         justify-content: center;
         margin-top: 0.5em;
 
         &-icon {
-          width: auto;
-          height: 100%;
+          width: 1.7em;
+          height: auto;
           &--right{
             margin-left: 2em;
           }
@@ -173,7 +172,7 @@
       &__button--clicked {
         span {
           &:nth-child(1) {
-            transform: translateY(10px) rotateZ(405deg);
+            transform: translateY(9px) rotateZ(405deg);
             transition-delay: 0.1s;
           }
           &:nth-child(2) {
@@ -182,7 +181,7 @@
             transition-delay: 0;
           }
           &:nth-child(3) {
-            transform: translateY(-10px) rotateZ(-45deg);
+            transform: translateY(-9px) rotateZ(-45deg);
             transition-delay: 0.1s;
           }
         }

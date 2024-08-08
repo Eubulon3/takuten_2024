@@ -4,17 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 0;
+  padding: 20px 0;
 
   &__icons-container {
-    height: 1.5rem;
     display: flex;
     justify-content: center;
     margin-top: 0.5em;
 
     &-icon {
-      width: auto;
-      height: 100%;
+      width: 1.7em;
+      height: auto;
       &--right{
         margin-left: 2em;
       }
