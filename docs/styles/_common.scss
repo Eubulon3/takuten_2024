@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+span{
+  text-align: center;
+}
+
 button {
   border: none !important;
   background-color: transparent;
@@ -32,6 +36,14 @@ li {
 
 ul{
   padding: 0;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+.black{
+  fill: v.$cBlack;
 }
 
 .font-sm {

@@ -1,7 +1,7 @@
 @use "mixin" as *;
 @use "variable" as v;
 
-#venue {
+.venue {
   background-color: v.$cSub;
 
   h1,
@@ -10,43 +10,56 @@
     color: v.$cWhite;
   }
 
-  .content {
-    & > div {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-      & > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-        @for $i from 1 to 4 {
-          &:nth-child(#{$i}) {
-            flex-grow: $i;
-            width: calc(100% * $i / 3);
-          }
-        }
-        @include mq(sm) {
-          @for $i from 1 to 4 {
-            &:nth-child(#{$i}) {
-              flex-grow: $i;
-              width: calc(100% * $i / 6);
-            }
-          }
-        }
-        & > div {
-          span {
-            text-align: center;
-            white-space: nowrap;
-          }
-        }
-        @include badge(v.$cWhite, v.$cSub){}
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    &-date {
+      flex-grow: 1;
+      width: calc(100% * 1 / 3);
+
+      @include mq(sm) {
+        flex-grow: 1;
+        width: calc(100% * 1 / 6);
       }
     }
+    &-time {
+      flex-grow: 2;
+      width: calc(100% * 2 / 3);
+      @include badge(v.$cWhite, v.$cSub) {
+      }
 
-    & > p{
-        margin-top: 1.5em;
+      @include mq(sm) {
+        flex-grow: 2;
+        width: calc(100% * 2 / 6);
+      }
     }
+    &-map {
+      flex-grow: 3;
+      width: calc(100% * 3 / 3);
+
+      @include mq(sm) {
+        flex-grow: 3;
+        width: calc(100% * 3 / 6);
+      }
+    }
+  }
+  &__foot{
+    & > p{
+      margin-top: 1.5em;
+    }
+  }
+
+
+  & .arrow {
+    height: 2rem;
   }
 }

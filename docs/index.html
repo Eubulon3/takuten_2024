@@ -35,6 +35,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <div id="global-container">
@@ -42,20 +45,24 @@
         <a href="#" class="header__heading">
           <img
             class="header__heading-image"
-            src="./imgs/logo_takuten.png"
+            src="./imgs/logo_takuten.webp"
             alt="卓展ロゴ"
           />
           <img
             class="header__heading-image text-image"
-            src="./imgs/text_takuten.png"
+            src="./imgs/text_takuten.webp"
             alt="takuten2024"
           />
         </a>
         <nav class="header__navigation hide-on-mobile">
           <ul class="header__navigation-container">
-            <li><a href="#about" class="header__navigation-text">卓展とは</a></li>
+            <li>
+              <a href="#about" class="header__navigation-text">卓展とは</a>
+            </li>
             <li><a href="#list" class="header__navigation-text">卓一覧</a></li>
-            <li><a href="#venue" class="header__navigation-text">会場情報</a></li>
+            <li>
+              <a href="#venue" class="header__navigation-text">会場情報</a>
+            </li>
             <li><a href="#sponsor" class="header__navigation-text">協賛</a></li>
           </ul>
         </nav>
@@ -86,7 +93,7 @@
           <div class="header__mask-title">
             <img
               class="header__mask-title-img"
-              src="./imgs/logo_takuten.png"
+              src="./imgs/logo_takuten.webp"
               alt="背景画像"
             />
             <p class="header__mask-title-text">
@@ -104,7 +111,7 @@
                 rel="noopener noreferrer"
                 ><img
                   class="header__mask-sns-icons-icon"
-                  src="./imgs/logo_insta.png"
+                  src="./imgs/logo_insta.webp"
                   alt="公式インスタグラム"
               /></a>
               <a
@@ -113,7 +120,7 @@
                 rel="noopener noreferrer"
                 ><img
                   class="header__mask-sns-icons-icon header__mask-sns-icons-icon--right"
-                  src="./imgs/logo_x.png"
+                  src="./imgs/logo_x.webp"
                   alt="公式X(旧Twitter)"
               /></a>
             </div>
@@ -125,14 +132,14 @@
         <div id="hero" class="hero">
           <div class="hero__flex-container">
             <div class="hero__image-container">
-              <img src="./imgs/geo_left.png" alt="no-image" />
+              <img src="./imgs/geo_left.webp" alt="no-image" />
             </div>
             <div class="hero__image-container">
-              <img src="./imgs/logo_takuten.png" alt="no-image" />
-              <img src="./imgs/text_takuten.png" alt="takuten2024" />
+              <img src="./imgs/logo_takuten.webp" alt="no-image" />
+              <img src="./imgs/text_takuten.webp" alt="takuten2024" />
             </div>
             <div class="hero__image-container">
-              <img src="./imgs/geo_right.png" alt="no-image" />
+              <img src="./imgs/geo_right.webp" alt="no-image" />
             </div>
           </div>
         </div>
@@ -157,7 +164,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_metalab.png"
+                  src="./imgs/logo_metalab.webp"
                   alt="めたらぼ画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -167,7 +174,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_arca.png"
+                  src="./imgs/logo_arca.webp"
                   alt="arca画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -177,7 +184,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_roxima.png"
+                  src="./imgs/logo_roxima.webp"
                   alt="roxima画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -187,7 +194,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_reverb.png"
+                  src="./imgs/logo_reverb.webp"
                   alt="reverb画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -197,7 +204,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_remodel.png"
+                  src="./imgs/logo_remodel.webp"
                   alt="remodel画像"
                 />
                 <span class="font-sm list__summary-button-genre">建築</span>
@@ -205,7 +212,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_strato.png"
+                  src="./imgs/logo_strato.webp"
                   alt="strato画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -215,7 +222,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_rium.png"
+                  src="./imgs/logo_rium.webp"
                   alt="rium画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -225,7 +232,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_sin.png"
+                  src="./imgs/logo_sin.webp"
                   alt="sin画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -241,7 +248,7 @@
                   <!-- Slides -->
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_metalab.png"
+                      src="./imgs/logo_metalab.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -260,7 +267,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_arca.png"
+                      src="./imgs/logo_arca.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -279,7 +286,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_roxima.png"
+                      src="./imgs/logo_roxima.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -298,7 +305,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_reverb.png"
+                      src="./imgs/logo_reverb.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -317,7 +324,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_remodel.png"
+                      src="./imgs/logo_remodel.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -336,7 +343,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_strato.png"
+                      src="./imgs/logo_strato.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -355,7 +362,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_rium.png"
+                      src="./imgs/logo_rium.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -374,7 +381,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_sin.png"
+                      src="./imgs/logo_sin.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -409,42 +416,44 @@
         <section id="venue" class="venue">
           <div class="content">
             <h1>会場情報</h1>
-            <div>
-              <div>
+            <div class="venue__head">
+              <div class="venue__head-container venue__head-date">
                 <div>
-                  <span class="font-lg">8.16</span
-                  ><span class="font-sm">Fri</span>
+                  <span class="font-lg nowrap">8.16</span
+                  ><span class="font-sm nowrap">Fri</span>
                 </div>
-                <div><span>&darr;</span></div>
+                <img src="./imgs/arrow.svg" alt="↓" class="arrow" />
                 <div>
                   <span class="font-lg">8.18</span
                   ><span class="font-sm">Sun</span>
                 </div>
               </div>
-              <div>
-                <div><span class="font-lr">10:00 - 17:00</span></div>
-                <div><span class="font-sm">最終日のみ - 16:00</span></div>
-                <div><span class="badge font-md">入場無料</span></div>
+              <div class="venue__head-container venue__head-time">
+                <div><span class="font-lr nowrap">10:00 - 17:00</span></div>
+                <div><span class="font-sm nowrap">最終日のみ - 16:00</span></div>
+                <div><span class="badge font-md nowrap">入場無料</span></div>
               </div>
-              <div>
-                <img src="./imgs/map.png" alt="地図画像" />
+              <div class="venue__head-container venue__head-map">
+                <img src="./imgs/map.webp" alt="地図画像" />
               </div>
             </div>
-            <p class="font-lr">
-              名古屋市立大学 北千種キャンパス<br />
-              &#12306;464-0083 愛知県名古屋市千種区北千種2-1-10
-            </p>
-            <p>
-              &#9632;地下鉄 名城線「ナゴヤドーム前矢田駅」1番出口より徒歩15分<br />
-              &#9632;市バス・名鉄バス「萱場」より徒歩1分<br />
-              &#9632;市バス「清明山」より徒歩5分
-            </p>
+            <div class="venue__foot">
+              <p class="font-lr">
+                名古屋市立大学 北千種キャンパス<br />
+                &#12306;464-0083 愛知県名古屋市千種区北千種2-1-10
+              </p>
+              <p>
+                &#9632;地下鉄 名城線「ナゴヤドーム前矢田駅」1番出口より徒歩15分<br />
+                &#9632;市バス・名鉄バス「萱場」より徒歩1分<br />
+                &#9632;市バス「清明山」より徒歩5分
+              </p>
+            </div>
           </div>
         </section>
         <section id="sponsor">
           <div class="content">
             <h1>協賛</h1>
-            <img src="./imgs/kenkoukai.png" alt="萱光会" />
+            <img src="./imgs/kenkoukai.webp" alt="萱光会" />
           </div>
           <img src="./imgs/text_takuten.svg" alt="" />
         </section>
@@ -457,7 +466,7 @@
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="./imgs/logo_insta.png"
+              src="./imgs/logo_insta.webp"
               alt="公式インスタグラム"
               class="footer__icons-container-icon"
           /></a>
@@ -466,14 +475,12 @@
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="./imgs/logo_x.png"
+              src="./imgs/logo_x.webp"
               alt="公式X(旧Twitter)"
               class="footer__icons-container-icon footer__icons-container-icon--right"
           /></a>
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
   </body>
 </html>

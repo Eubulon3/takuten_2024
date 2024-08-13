@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  text-align: center;
+}
+
 button {
   border: none !important;
   background-color: transparent;
@@ -29,6 +33,14 @@ li {
 
 ul {
   padding: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.black {
+  fill: black;
 }
 
 .font-sm {
@@ -693,56 +705,40 @@ section {
   bottom: 0 !important;
 }
 
-#venue {
+.venue {
   background-color: #62b3e4;
 }
-#venue h1,
-#venue span,
-#venue p {
+.venue h1,
+.venue span,
+.venue p {
   color: white;
 }
-#venue .content > div {
+.venue__head {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-#venue .content > div > div {
+.venue__head-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
 }
-#venue .content > div > div:nth-child(1) {
+.venue__head-date {
   flex-grow: 1;
   width: 33.3333333333%;
 }
-#venue .content > div > div:nth-child(2) {
-  flex-grow: 2;
-  width: 66.6666666667%;
-}
-#venue .content > div > div:nth-child(3) {
-  flex-grow: 3;
-  width: 100%;
-}
 @media (min-width: 480px) {
-  #venue .content > div > div:nth-child(1) {
+  .venue__head-date {
     flex-grow: 1;
     width: 16.6666666667%;
   }
-  #venue .content > div > div:nth-child(2) {
-    flex-grow: 2;
-    width: 33.3333333333%;
-  }
-  #venue .content > div > div:nth-child(3) {
-    flex-grow: 3;
-    width: 50%;
-  }
 }
-#venue .content > div > div > div span {
-  text-align: center;
-  white-space: nowrap;
+.venue__head-time {
+  flex-grow: 2;
+  width: 66.6666666667%;
 }
-#venue .content > div > div .badge {
+.venue__head-time .badge {
   display: inline-block;
   height: 2.5em;
   background-color: white;
@@ -752,8 +748,27 @@ section {
   margin-top: 0.5em;
   font-weight: 600;
 }
-#venue .content > p {
+@media (min-width: 480px) {
+  .venue__head-time {
+    flex-grow: 2;
+    width: 33.3333333333%;
+  }
+}
+.venue__head-map {
+  flex-grow: 3;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .venue__head-map {
+    flex-grow: 3;
+    width: 50%;
+  }
+}
+.venue__foot > p {
   margin-top: 1.5em;
+}
+.venue .arrow {
+  height: 2rem;
 }
 
 #sponsor {

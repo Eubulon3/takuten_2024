@@ -97,7 +97,7 @@ class MyObserver{
     this.options = {
       root: null,
       rootMargin: "0px 0px 0px 0px",
-      threshold: 0.6,
+      threshold: 0.55,
     };
     this.DOM = {};
     this.DOM.els = document.querySelectorAll("section");
@@ -116,19 +116,18 @@ class MyObserver{
     entries.forEach(entry => {
       if(entry.isIntersecting){
         const index = Array.from(this.DOM.els).indexOf(entry.target);
-        console.log(`inviwe: ${index}`);
+        // console.log(`inviwe: ${index}`);
         this.DOM.nav_link[index].classList.add("active");
       }else{
         const index = Array.from(this.DOM.els).indexOf(entry.target);
-        console.log(`outview: ${index}`);
+        // console.log(`outview: ${index}`);
         this.DOM.nav_link[index].classList.remove("active");
       }
     })
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  new MobileMenu();
-  new TakuDetail();
-  new MyObserver();
-});
+
+new MobileMenu();
+new TakuDetail();
+new MyObserver();
