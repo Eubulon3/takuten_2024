@@ -91,7 +91,44 @@ class TakuDetail {
   }
 }
 
+class MyObserver{
+  constructor(){
+    this.io = null;
+    this.options = {
+      root: null,
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.6,
+    };
+    this.DOM = {};
+    this.DOM.els = document.querySelectorAll("section");
+    this.DOM.nav_link = document.querySelectorAll(".header__navigation-text");
+
+    this._initObserver();
+  }
+  _initObserver(){
+    this.io = new IntersectionObserver(this._cb.bind(this), this.options);
+    this.DOM.els.forEach((el) => {
+      this.io.observe(el);
+    })
+  }
+
+  _cb(entries, observer){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const index = Array.from(this.DOM.els).indexOf(entry.target);
+        console.log(`inviwe: ${index}`);
+        this.DOM.nav_link[index].classList.add("active");
+      }else{
+        const index = Array.from(this.DOM.els).indexOf(entry.target);
+        console.log(`outview: ${index}`);
+        this.DOM.nav_link[index].classList.remove("active");
+      }
+    })
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   new MobileMenu();
   new TakuDetail();
+  new MyObserver();
 });

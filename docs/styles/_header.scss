@@ -36,11 +36,15 @@
   }
 
   &__navigation {
-    & > ul {
+    &-container {
       display: flex;
       gap: 1rem;
-      & > li {
-        white-space: nowrap;
+    }
+    &-text {
+      display: inline-block;
+      white-space: nowrap;
+      &.active{
+        border-bottom: 3px solid v.$cMain;
       }
     }
   }

@@ -139,12 +139,16 @@ section {
 .header__heading-image:nth-child(2) {
   height: 0.7rem;
 }
-.header__navigation > ul {
+.header__navigation-container {
   display: flex;
   gap: 1rem;
 }
-.header__navigation > ul > li {
+.header__navigation-text {
+  display: inline-block;
   white-space: nowrap;
+}
+.header__navigation-text.active {
+  border-bottom: 3px solid #ea6849;
 }
 .header__button {
   z-index: 20;
