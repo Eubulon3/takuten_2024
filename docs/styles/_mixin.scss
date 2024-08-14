@@ -6,7 +6,6 @@
   }
 }
 
-
 @mixin wrap($childEl: div) {
   .wrap {
     @content;
@@ -52,19 +51,19 @@
   }
 }
 
-@mixin button($col: v.$cBlack){
-  .button{
+@mixin button($col: v.$cBlack) {
+  .button {
     @content;
     display: block;
     width: fit-content;
-    padding: .5em 1.5em;
+    padding: 0.5em 1.5em;
     background-color: v.$cWhite;
     border: 1px solid $col;
     border-radius: 1.3em;
     color: $col;
-    transition: .1s;
+    transition: 0.1s;
 
-    &:hover{
+    &:hover {
       background-color: $col;
       color: v.$cWhite;
     }
@@ -88,5 +87,17 @@
     iteration-count: $iteration-count;
     direction: $direction;
     fill-mode: $fill-mode;
+  }
+}
+
+@mixin appear($parent, $child, $n, $loop: 1) {
+  .#{$parent} .#{$child}{
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 0.2s * ($n - 1);
+  }
+
+  .#{$parent}.appear .#{$child} {
+    opacity: 1;
   }
 }

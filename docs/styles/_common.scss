@@ -46,6 +46,10 @@ ul{
   fill: v.$cBlack;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 .font-sm {
   font-size: 14px;
 
@@ -115,4 +119,12 @@ section {
   @include mq(md) {
     width: 60%;
   }
+}
+
+
+.copyright{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: .5em;
 }

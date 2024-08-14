@@ -51,7 +51,7 @@ class TakuDetail {
   _initSwiper() {
     this.swiper = new Swiper(".swiper", {
       // direction: "vertical",
-      loop: true,
+      loop: false,
       slidesPerView: 1,
       slidesPerGroup: 1,
 
@@ -91,42 +91,54 @@ class TakuDetail {
   }
 }
 
-class MyObserver{
-  constructor(){
+class MyObserver {
+  constructor() {
     this.io = null;
     this.options = {
       root: null,
       rootMargin: "0px 0px 0px 0px",
-      threshold: 0.55,
+      threshold: 0,
     };
+    this.options["threshold"] = this._getResponsiveThreshold();
     this.DOM = {};
     this.DOM.els = document.querySelectorAll("section");
     this.DOM.nav_link = document.querySelectorAll(".header__navigation-text");
 
     this._initObserver();
   }
-  _initObserver(){
+
+  _getResponsiveThreshold() {
+    const width = window.innerWidth;
+
+    if (width < 768) {
+      return 0.3; // モバイル
+    }else {
+      return 0.5; // デスクトップ
+    }
+  }
+
+  _initObserver() {
     this.io = new IntersectionObserver(this._cb.bind(this), this.options);
     this.DOM.els.forEach((el) => {
       this.io.observe(el);
-    })
+    });
   }
 
-  _cb(entries, observer){
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
+  _cb(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
         const index = Array.from(this.DOM.els).indexOf(entry.target);
         // console.log(`inviwe: ${index}`);
+        this.DOM.els[index].classList.add("appear");
         this.DOM.nav_link[index].classList.add("active");
-      }else{
+      } else {
         const index = Array.from(this.DOM.els).indexOf(entry.target);
         // console.log(`outview: ${index}`);
         this.DOM.nav_link[index].classList.remove("active");
       }
-    })
+    });
   }
 }
-
 
 new MobileMenu();
 new TakuDetail();

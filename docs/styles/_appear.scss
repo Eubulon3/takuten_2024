@@ -1,0 +1,18 @@
+@use "mixin" as *;
+
+@include appear($parent: about, $child: about__heading, $n: 1);
+@include appear($parent: about, $child: about__paragraph, $n: 2);
+
+@include appear($parent: list, $child: list__heading, $n: 1);
+@for $i from 1 to 9{
+    @include appear($parent: list, $child: "list__summary-container > Button:nth-child(#{$i})", $n: $i);
+}
+
+@include appear($parent: venue, $child: venue__heading, $n: 1);
+@include appear($parent: venue, $child: venue__head-date, $n: 2);
+@include appear($parent: venue, $child: venue__head-time, $n: 3);
+@include appear($parent: venue, $child: venue__head-map, $n: 4);
+@include appear($parent: venue, $child: venue__foot, $n: 5);
+
+@include appear($parent: sponsor, $child: sponsor__heading, $n: 1);
+@include appear($parent: sponsor, $child: sponsor__image, $n: 2);
