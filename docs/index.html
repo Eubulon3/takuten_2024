@@ -10,16 +10,17 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href="https://geikou-takuten.com/" />
-    <!-- <link rel="icon" href="https://geikou-takuten.com/2024/favicon.ico/" />
+    <link rel="icon" href="https://geikou-takuten.com/2024/favicon.ico/" />
     <link
       rel="apple-touch-icon"
       href="https://geikou-takuten.com/2024/favicon.ico"
-    /> -->
+    />
     <meta
       name="keywords"
       content="卓展,卓展2024,名古屋市,芸術工学,名古屋市立大学,名市大,芸工"
     />
 
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta property="og:site_name" content="卓展2024" />
     <meta property="og:url" content="https://geikou-takuten.com/2024" />
     <meta property="og:type" content="website" />
@@ -47,7 +48,7 @@
 
     <!-- ローダーCDN等 -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <link rel="stylesheet" href="./styles/vendors/loading-bar.css" />
+    <link rel="stylesheet" href="./asset/styles/vendors/loading-bar.css" />
     <script>
       Pace.on("start", function () {
         const paceProgressInner = document.querySelector(
@@ -63,7 +64,7 @@
     </script>
     <!--  -->
 
-    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="asset/styles/vendors/css-reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,13 +75,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="asset/styles/style.css" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
-    <script src="scripts/main.js" defer></script>
+    <script src="asset/main.js" defer></script>
   </head>
   <body>
     <div id="global-container">
@@ -88,12 +89,12 @@
         <a href="#" class="header__heading">
           <img
             class="header__heading-image"
-            src="./imgs/logo_takuten.webp"
+            src="./asset/imgs/logo_takuten.webp"
             alt="卓展ロゴ"
           />
           <img
             class="header__heading-image text-image"
-            src="./imgs/text_takuten.webp"
+            src="./asset/imgs/text_takuten.webp"
             alt="takuten2024"
           />
         </a>
@@ -136,7 +137,7 @@
           <div class="header__mask-title">
             <img
               class="header__mask-title-img"
-              src="./imgs/logo_takuten.webp"
+              src="./asset/imgs/logo_takuten.webp"
               alt="背景画像"
             />
             <p class="header__mask-title-text">
@@ -154,7 +155,7 @@
                 rel="noopener noreferrer"
                 ><img
                   class="header__mask-sns-icons-icon"
-                  src="./imgs/logo_insta.webp"
+                  src="./asset/imgs/logo_insta.webp"
                   alt="公式インスタグラム"
               /></a>
               <a
@@ -163,7 +164,7 @@
                 rel="noopener noreferrer"
                 ><img
                   class="header__mask-sns-icons-icon header__mask-sns-icons-icon--right"
-                  src="./imgs/logo_x.webp"
+                  src="./asset/imgs/logo_x.webp"
                   alt="公式X(旧Twitter)"
               /></a>
             </div>
@@ -175,14 +176,14 @@
         <div id="hero" class="hero">
           <div class="hero__flex-container">
             <div class="hero__image-container">
-              <img src="./imgs/geo_left.webp" alt="no-image" />
+              <img src="./asset/imgs/geo_left.webp" alt="no-image" />
             </div>
             <div class="hero__image-container">
-              <img src="./imgs/logo_takuten.webp" alt="no-image" />
-              <img src="./imgs/text_takuten.webp" alt="takuten2024" />
+              <img src="./asset/imgs/logo_takuten.webp" alt="no-image" />
+              <img src="./asset/imgs/text_takuten.webp" alt="takuten2024" />
             </div>
             <div class="hero__image-container">
-              <img src="./imgs/geo_right.webp" alt="no-image" />
+              <img src="./asset/imgs/geo_right.webp" alt="no-image" />
             </div>
           </div>
         </div>
@@ -207,7 +208,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_metalab.webp"
+                  src="./asset/imgs/logo_metalab.webp"
                   alt="めたらぼ画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -217,7 +218,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_arca.webp"
+                  src="./asset/imgs/logo_arca.webp"
                   alt="arca画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -227,7 +228,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_roxima.webp"
+                  src="./asset/imgs/logo_roxima.webp"
                   alt="roxima画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -237,7 +238,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_reverb.webp"
+                  src="./asset/imgs/logo_reverb.webp"
                   alt="reverb画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -247,7 +248,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_remodel.webp"
+                  src="./asset/imgs/logo_remodel.webp"
                   alt="remodel画像"
                 />
                 <span class="font-sm list__summary-button-genre">建築</span>
@@ -255,7 +256,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_strato.webp"
+                  src="./asset/imgs/logo_strato.webp"
                   alt="strato画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -265,7 +266,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_rium.webp"
+                  src="./asset/imgs/logo_rium.webp"
                   alt="rium画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -275,7 +276,7 @@
               <button class="list__summary-button">
                 <img
                   class="list__summary-button-image"
-                  src="./imgs/logo_sin.webp"
+                  src="./asset/imgs/logo_sin.webp"
                   alt="sin画像"
                 />
                 <span class="font-sm list__summary-button-genre"
@@ -291,7 +292,7 @@
                   <!-- Slides -->
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_metalab.webp"
+                      src="./asset/imgs/logo_metalab.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -314,7 +315,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_arca.webp"
+                      src="./asset/imgs/logo_arca.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -337,7 +338,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_roxima.webp"
+                      src="./asset/imgs/logo_roxima.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -360,7 +361,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_reverb.webp"
+                      src="./asset/imgs/logo_reverb.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -383,7 +384,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_remodel.webp"
+                      src="./asset/imgs/logo_remodel.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -406,7 +407,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_strato.webp"
+                      src="./asset/imgs/logo_strato.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -429,7 +430,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_rium.webp"
+                      src="./asset/imgs/logo_rium.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -452,7 +453,7 @@
                   </div>
                   <div class="swiper-slide list__detail-each">
                     <img
-                      src="./imgs/logo_sin.webp"
+                      src="./asset/imgs/logo_sin.webp"
                       alt="no-image"
                       class="list__detail-each-image"
                     />
@@ -497,7 +498,7 @@
                   <span class="font-lg nowrap">8.16</span
                   ><span class="font-sm nowrap">Fri</span>
                 </div>
-                <img src="./imgs/arrow.svg" alt="↓" class="arrow" />
+                <img src="./asset/imgs/arrow.svg" alt="↓" class="arrow" />
                 <div>
                   <span class="font-lg">8.18</span
                   ><span class="font-sm">Sun</span>
@@ -511,7 +512,7 @@
                 <div><span class="badge font-md nowrap">入場無料</span></div>
               </div>
               <div class="venue__head-container venue__head-map">
-                <img src="./imgs/map.webp" alt="地図画像" />
+                <img src="./asset/imgs/map.webp" alt="地図画像" />
               </div>
             </div>
             <div class="venue__foot">
@@ -532,12 +533,12 @@
           <div class="content">
             <h1 class="sponsor__heading">協賛</h1>
             <img
-              src="./imgs/kenkoukai.webp"
+              src="./asset/imgs/kenkoukai.webp"
               alt="萱光会"
               class="sponsor__image"
             />
           </div>
-          <img src="./imgs/text_takuten.svg" alt="" />
+          <img src="./asset/imgs/text_takuten.svg" alt="" />
         </section>
       </main>
       <footer class="footer">
@@ -548,7 +549,7 @@
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="./imgs/logo_insta.webp"
+              src="./asset/imgs/logo_insta.webp"
               alt="公式インスタグラム"
               class="footer__icons-container-icon"
           /></a>
@@ -557,7 +558,7 @@
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="./imgs/logo_x.webp"
+              src="./asset/imgs/logo_x.webp"
               alt="公式X(旧Twitter)"
               class="footer__icons-container-icon footer__icons-container-icon--right"
           /></a>
